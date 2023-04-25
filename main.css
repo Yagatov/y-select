@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #1d1e22;
+  color: #ffffff;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.field-box, .field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-box {
+  gap: 20px;
+}
+
+.field {
+  gap: 10px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.input {
+  border: 3px solid rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .1);
+  outline: none;
+  padding: 10px 20px;
+  
+  color: #ffffff;
+}
+
+/* YAGATov SelectER */
+.select {
+  border: 3px solid rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, .01);
+  cursor: pointer;
+}
+
+.select-header {
+  border: 3px solid rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .1);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-header__icon {
+  transition: transform .3s ease;
+}
+
+.select-header__value, .select-header__price {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.select-header__price {
+  flex-grow: 1;
+  text-align: end;
+  margin-right: 20px;
+}
+
+.select-content {
+  display: none;
+}
+
+.select.active .select-content {
+  display: block;
+}
+
+.select.active .select-header__icon {
+  transform: rotate(180deg);
+}
+
+.select-content__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, .01);
+  padding: 10px 20px;
+}
+
