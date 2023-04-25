@@ -26,6 +26,11 @@ body {
   margin-bottom: 40px;
 }
 
+.title sup {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .field-box, .field {
   display: flex;
   flex-direction: column;
@@ -33,6 +38,7 @@ body {
 
 .field-box {
   gap: 20px;
+  margin-bottom: 40px;
 }
 
 .field {
@@ -51,6 +57,15 @@ body {
   padding: 10px 20px;
   
   color: #ffffff;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* YAGATov SelectER */
@@ -73,14 +88,16 @@ body {
   transition: transform .3s ease;
 }
 
-.select-header__value, .select-header__price {
+.select-header__value, .select-header__sale {
   font-weight: 500;
   font-size: 16px;
 }
 
-.select-header__price {
+.select-header__value, .select-content__value {
   flex-grow: 1;
-  text-align: end;
+}
+
+.select-header__price, .select-header__sale, .select-content__price, .select-content__sale {
   margin-right: 20px;
 }
 

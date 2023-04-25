@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecter</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="GET">
+          <div class="title">Форма <sup>&lt;примерчик/&gt;</sup></div>
+          
+          <div class="field-box">
+            <div class="field">
+              <label for="login" class="label">Логин</label>
+              <input id="login" name="login" type="text" class="input">
+            </div>
+
+            <div class="field">
+              <label for="email" class="label">Почта</label>
+              <input id="email" name="email" type="email" class="input">
+            </div>
+      
+            <div class="field">
+              <label for="password" class="label">Пароль</label>
+              <input id="password" name="password" type="password" class="input">
+            </div>
+            
+            <div class="field">
+              <label for="" class="label">Выберите режим</label>
+
+              <ysel ysel-name="mode" ysel-default="1" class="select">
+                <div ysel-header class="select-header">
+                  <div ysel-property="value" class="select-header__value"></div>
+                  <div ysel-property="sale" class="select-header__sale"></div>
+                  <svg class="select-header__icon" width="15" height="15" viewBox="0 0 15 15" stroke="white" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="3.70711" y1="5.29289" x2="8.22979" y2="9.81557" stroke-width="2"/>
+                    <line x1="7.32893" y1="10.0115" x2="12.5799" y2="5.25861" stroke-width="2"/>
+                  </svg>
+                </div>
+                
+                <div class="select-content">
+                  <div ysel-item="1" class="select-content__item">
+                    <div ysel-property="value" class="select-content__value">GRIEF</div>
+                    <div ysel-property="sale" class="select-header__sale">Скидка 10%</div>
+                  </div>
+                  <div ysel-item="2" class="select-content__item">
+                    <div ysel-property="value" class="select-content__value">ANARCHY</div>
+                    <div ysel-property="sale" class="select-header__sale">Скидка 5%</div>
+                  </div>
+                  <div ysel-item="3" class="select-content__item">
+                    <div ysel-property="value" class="select-content__value">MINI-GAMES</div>
+                    <div ysel-property="sale" class="select-header__sale">Скидка 15%</div>
+                  </div>
+                </div>
+              </ysel>
+            </div>
+            
+            <div class="field">
+              <label for="" class="label">Выберите статус</label>
+
+              <ysel ysel-name="status" class="select">
+                <div ysel-header class="select-header">
+                  <div ysel-property="value" class="select-header__value">Выберите значение</div>
+                  <div ysel-property="price" class="select-header__price"></div>
+                  <div ysel-property="bonus" class="select-header__price"></div>
+                  <svg class="select-header__icon" width="15" height="15" viewBox="0 0 15 15" stroke="white" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="3.70711" y1="5.29289" x2="8.22979" y2="9.81557" stroke-width="2"/>
+                    <line x1="7.32893" y1="10.0115" x2="12.5799" y2="5.25861" stroke-width="2"/>
+                  </svg>
+                </div>
+                
+                <div class="select-content">
+                  <div ysel-item="1" class="select-content__item">
+                    <div ysel-property="value" class="select-content__value">Premium</div>
+                    <div ysel-property="price" class="select-content__price">255p</div>
+                    <div ysel-property="bonus" class="select-content__price">+10 бонусов</div>
+                  </div>
+                  <div ysel-item="2" class="select-content__item">
+                    <div ysel-property="value" class="select-content__value">Vip</div>
+                    <div ysel-property="price" class="select-content__price">500p</div>
+                    <div ysel-property="bonus" class="select-content__price">+20 бонусов</div>
+                  </div>
+                  <div ysel-item="3" class="select-content__item">
+                    <div ysel-property="value" class="select-content__value">Admin</div>
+                    <div ysel-property="price" class="select-content__price">5000p</div>
+                    <div ysel-property="bonus" class="select-content__price">+200 бонусов</div>
+                  </div>
+                </div>
+              </ysel>
+            </div>
+          </div>
+
+          <button class="button">Отправить</button>
+        </form>
+      </div>
+
+    <script src="../ysel.js"></script>
+</body>
+</html>

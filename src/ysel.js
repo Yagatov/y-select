@@ -1,17 +1,23 @@
-const prefix = "yagatov"; // чтобы выебываться
+const prefix = "ysel";
 
 const selects = document.querySelectorAll(prefix);
 
 selects.forEach(select => {
-    const header = select.querySelector("[" + prefix + "-header]");
-    const value = header.querySelector("[" + prefix + "-value]");
-    const properties = header.querySelectorAll("[" + prefix + "-property]");  // это потом
+    const selectors = {
+        header: prefix + "-header",
+        property: prefix + "-property",
+        item: prefix + "-item",
+        name: prefix + '-name',
+        default: prefix + '-default'
+    }
 
-    const box = select.querySelector("[" + prefix + "-box]");
-    const items = select.querySelectorAll("[" + prefix + "-item]");
+    const header = select.querySelector("[" + selectors.header + "]");
+    const properties = header.querySelectorAll("[" + selectors.property + "]");
 
-    const name = select.getAttribute(prefix + '-name');
-    const defaultValue = select.getAttribute(prefix + '-default'); // default null
+    const items = select.querySelectorAll("[" + selectors.item + "]");
+
+    const name = select.getAttribute(selectors.name);
+    const defaultValue = select.getAttribute(selectors.default);
 
     let input = null;
 
@@ -19,15 +25,10 @@ selects.forEach(select => {
         select.classList.toggle('active');
     });
 
-    if(defaultValue == null) {
-        value.textContent = "Выберите значение"
-    }
-
     items.forEach(item => {
         const itemInfo = {
             id: item.getAttribute(prefix + '-item'),
-            value: item.querySelector("[" + prefix + '-value]'),
-            properties: item.querySelectorAll("[" + prefix + "-property]") // это тоже потом
+            properties: item.querySelectorAll("[" + selectors.property + "]")
         };
 
         if(defaultValue != null && itemInfo.id == defaultValue) {
@@ -51,14 +52,11 @@ selects.forEach(select => {
             input = element;
         }
 
-        value.textContent = info.value.textContent;
-        input.setAttribute('value', info.id);
-
         info.properties.forEach(property => {
-            const name = property.getAttribute(prefix + "-property");
+            const name = property.getAttribute(selectors.property);
 
             properties.forEach(selectPropertyItem => {
-                const selectName = selectPropertyItem.getAttribute(prefix + "-property");
+                const selectName = selectPropertyItem.getAttribute(selectors.property);
 
                 if(name == selectName) {
                     selectPropertyItem.textContent = property.textContent;
