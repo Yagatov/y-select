@@ -1,16 +1,16 @@
 const prefix = "ysel";
 
-const selects = document.querySelectorAll(prefix);
+const selectors = {
+    header: prefix + "-header",
+    property: prefix + "-property",
+    item: prefix + "-item",
+    name: prefix + '-name',
+    default: prefix + '-default'
+}
+
+const selects = document.querySelectorAll("[" + selectors.name + "]");
 
 selects.forEach(select => {
-    const selectors = {
-        header: prefix + "-header",
-        property: prefix + "-property",
-        item: prefix + "-item",
-        name: prefix + '-name',
-        default: prefix + '-default'
-    }
-
     const header = select.querySelector("[" + selectors.header + "]");
     const properties = header.querySelectorAll("[" + selectors.property + "]");
 

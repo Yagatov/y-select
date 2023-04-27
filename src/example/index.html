@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selecter</title>
+    <title>YSelect</title>
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
     <div class="wrapper">
         <form action="GET">
-          <div class="title">Форма <sup>&lt;примерчик/&gt;</sup></div>
+          <div class="title">Форма <sup>&lt;example/&gt;</sup></div>
           
           <div class="field-box">
             <div class="field">
@@ -31,7 +31,7 @@
             <div class="field">
               <label for="" class="label">Выберите режим</label>
 
-              <ysel ysel-name="mode" ysel-default="1" class="select">
+              <div ysel-name="mode" ysel-default="1" class="select">
                 <div ysel-header class="select-header">
                   <div ysel-property="value" class="select-header__value"></div>
                   <div ysel-property="sale" class="select-header__sale"></div>
@@ -55,13 +55,13 @@
                     <div ysel-property="sale" class="select-header__sale">Скидка 15%</div>
                   </div>
                 </div>
-              </ysel>
+              </div>
             </div>
             
             <div class="field">
               <label for="" class="label">Выберите статус</label>
 
-              <ysel ysel-name="status" class="select">
+              <div ysel-name="status" class="select">
                 <div ysel-header class="select-header">
                   <div ysel-property="value" class="select-header__value">Выберите значение</div>
                   <div ysel-property="price" class="select-header__price"></div>
@@ -89,7 +89,7 @@
                     <div ysel-property="bonus" class="select-content__price">+200 бонусов</div>
                   </div>
                 </div>
-              </ysel>
+              </div>
             </div>
           </div>
 
