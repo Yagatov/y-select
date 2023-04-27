@@ -68,57 +68,6 @@ body {
   cursor: pointer;
 }
 
-/* YAGATov SelectER */
-.select {
-  border: 3px solid rgba(255, 255, 255, .1);
-  background-color: rgba(255, 255, 255, .01);
-  cursor: pointer;
-}
+/* Preparing... */
 
-.select-header {
-  border: 3px solid rgba(255, 255, 255, .5);
-  background-color: rgba(255, 255, 255, .1);
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.select-header__icon {
-  transition: transform .3s ease;
-}
-
-.select-header__value, .select-header__sale {
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.select-header__value, .select-content__value {
-  flex-grow: 1;
-}
-
-.select-header__price, .select-header__sale, .select-content__price, .select-content__sale {
-  margin-right: 20px;
-}
-
-.select-content {
-  display: none;
-}
-
-.select.active .select-content {
-  display: block;
-}
-
-.select.active .select-header__icon {
-  transform: rotate(180deg);
-}
-
-.select-content__item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 2px solid rgba(255, 255, 255, .1);
-  background-color: rgba(255, 255, 255, .01);
-  padding: 10px 20px;
-}
 
