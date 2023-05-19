@@ -43,7 +43,7 @@ selects.forEach(select => {
     function setItem(info) {
         if(input == null) {
             const element = document.createElement('input');
-            element.setAttribute('name', name)
+            element.setAttribute('name', name);
             element.setAttribute('id', name);
             element.setAttribute('hidden', '');
 
@@ -55,10 +55,14 @@ selects.forEach(select => {
         info.properties.forEach(property => {
             const name = property.getAttribute(selectors.property);
 
+            if(name === 'value') {
+                input.setAttribute('value', property.textContent);
+            }
+
             properties.forEach(selectPropertyItem => {
                 const selectName = selectPropertyItem.getAttribute(selectors.property);
 
-                if(name == selectName) {
+                if(name === selectName) {
                     selectPropertyItem.textContent = property.textContent;
                 }
             });
